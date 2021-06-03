@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (min-width:1200px) {
+            .container {
+                width: 992px;
+                margin: 0 auto;
+                display: flex;
+            }
+            .container div {
+                flex:1;
+                height: 80px;
+                line-height: 80px;
+            }
+        }
+        @media screen and (min-width:992px) and (max-width:1200px) {
+            .container {
+                width: 992px;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .container div {
+                height: 80px;
+                line-height: 80px;
+                flex: auto;
+            }
+            .container div:nth-child(1){
+                width: 992px;
+            }
+        }
+        @media screen and (min-width:768px) and (max-width:992px) {
+            .container {
+                width: 768px;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .container div {
+                width: 384px;
+                height: 80px;
+                line-height: 80px;
+                flex: auto;
+            }
+        }
+        @media screen and (max-width:768px) {
+            .container div {
+                height: 80px;
+                line-height: 80px;
+            }
+        }
+        .container div {
+            text-align: center;
+            color: white;
+        }
+        .container div:nth-child(1) {
+            background-color: red;
+        }
+        .container div:nth-child(2) {
+            background-color: blue;
+        }
+        .container div:nth-child(3) {
+            background-color: black;
+        }
+        .container div:nth-child(4) {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>
